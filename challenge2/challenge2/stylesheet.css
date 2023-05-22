@@ -1,0 +1,203 @@
+/*Had to use sources to find style tips for some css components, linked in README file.*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background: #ffffff;
+    color: #000000;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(content/frog2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*placeholder logo "university student"*/
+.headlogo{
+    padding: 10px 10%;
+}
+.logo{
+    width: 140px;
+}
+/*page navigation meno attop screen*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*stackoverflow- used stackoverflow advice to get positioning right*/
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+ color: rgb(0, 0, 0);
+ text-decoration: none;
+ font-size: 20px;
+ font-weight: 700;
+ position: relative;
+}
+/*stackoverflow2- used SO to make dynamic button underline*/
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background:#7197ff;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+/*bio section*/
+#about{
+    background-color: rgb(189, 189, 189);
+    padding: 80px 0;
+    color: #000000
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.bio1{
+    margin-left: 40px;
+    flex-basis: 35%;
+}
+.bio1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+/*stackoverflow3- had to use stackoverflow advice to optimize the placement of my text lol*/
+.bio2{
+    flex-basis: 60%;
+}
+.bio-text{
+    font-size: 60px;
+    font-weight: 600;
+}
+.bio-content{
+    font-size: 28px;
+    margin-right: 40px;
+}
+#portfolio{
+    padding: 50px 0;
+}
+.portfolio-title{
+    margin-left: 80px;
+}
+.work-panels{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    padding: 8%; /*remember!!!!!!!!*/
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.7s;
+}
+/*youtybe- used youtube video to learn boxes but cant find source link to video anymore :/ */
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), #444444);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 22px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color:#000000;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 50px;
+    background: #969696;
+    width: 63px;
+    height: 50px;
+    border-radius: 40%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.4);
+}
+.work:hover .layer{
+    height: 100%;
+}
+/*contact form*/
+/*youtube- used video for basic contact form, link is in README*/
+.contact-left{
+flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left{
+    margin-left: 80px;
+    margin-top: 30px;
+}
+.send{
+    display: inline-block;
+    background:#7197ff;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;  
+    background: #949494;
+    padding: 15px;
+    margin: 15px 0;
+    color: #ffffff;
+    font-size: 18;
+    border-radius: 6px;
+}
+form .send{
+    padding: 14px 60px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
